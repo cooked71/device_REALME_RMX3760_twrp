@@ -130,9 +130,7 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
-# VINTF ++from 3761+
-DEVICE_MANIFEST_FILE := device/realme/RE58C6/manifest.xml
-DEVICE_MATRIX_FILE := device/realme/RE58C6/compatibility_matrix.xml
+
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
