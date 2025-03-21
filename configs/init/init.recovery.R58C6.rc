@@ -1,0 +1,48 @@
+# Recovery init.rc for R58C6
+
+on init
+    # Mount required partitions
+    mount none /dev/null /vendor bind
+    mount none /dev/null /system_ext bind
+    
+    # Set recovery specific properties
+    setprop ro.boot.recovery.updated true
+    setprop ro.recovery.device R58C6
+    
+    # Set USB configurations
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 18D1
+    write /sys/class/android_usb/android0/idProduct D001
+    write /sys/class/android_usb/android0/functions adb
+    write /sys/class/android_usb/android0/enable 1
+    
+    # Set display brightness
+    write /sys/class/backlight/panel0-backlight/brightness 200
+    
+    # Enable power keys
+    write /sys/class/power_supply/battery/input_suspend 0
+
+on fs
+    # Wait for keymaster
+    wait_for_prop hwservicemanager.ready true
+    start vendor.keymaster-4-0
+    
+    # Mount dynamic partitions
+    mount ext4 /dev/block/mapper/system / ro
+    mount ext4 /dev/block/mapper/vendor /vendor ro
+    mount ext4 /dev/block/mapper/product /product ro
+    
+on post-fs
+    # Load kernel modules
+    insmod /vendor/lib/modules/audio.ko
+    insmod /vendor/lib/modules/wlan.ko
+    
+on boot
+    # Set screen resolution
+    setprop ro.sf.lcd_density 480
+    
+    # Enable ADB
+    setprop service.adb.root 1
+    
+    # Start recovery UI
+    start recovery

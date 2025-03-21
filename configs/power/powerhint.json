@@ -1,0 +1,208 @@
+{
+  "Nodes": [
+    {
+      "Name": "CPULittleClusterMaxFreq",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
+      "Values": [
+        "1800000",
+        "1625000",
+        "1500000",
+        "1450000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPULittleClusterMinFreq",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
+      "Values": [
+        "1800000",
+        "1625000",
+        "1500000",
+        "1450000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigClusterMaxFreq",
+      "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_max_freq",
+      "Values": [
+        "2000000",
+        "1800000",
+        "1625000",
+        "1500000"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigClusterMinFreq",
+      "Path": "/sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq",
+      "Values": [
+        "2000000",
+        "1800000",
+        "1625000",
+        "1500000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUMaxFreq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/max_pwrlevel",
+      "Values": [
+        "0",
+        "3"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUMinFreq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/min_pwrlevel",
+      "Values": [
+        "0",
+        "3",
+        "7"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUBusMinFreq",
+      "Path": "/sys/class/devfreq/soc:qcom,gpubw/min_freq",
+      "Values": [
+        "6881",
+        "5931",
+        "3879",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUForceRailOn",
+      "Path": "/sys/class/kgsl/kgsl-3d0/force_rail_on",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUForceClkOn",
+      "Path": "/sys/class/kgsl/kgsl-3d0/force_clk_on",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUIdleTimer",
+      "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
+      "Values": [
+        "10000",
+        "80"
+      ],
+      "ResetOnInit": true
+    }
+  ],
+  "Actions": [
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBigClusterMaxFreq",
+      "Value": "1625000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPULittleClusterMaxFreq",
+      "Value": "1500000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "GPUMaxFreq",
+      "Value": "3",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigClusterMinFreq",
+      "Value": "1500000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPULittleClusterMinFreq",
+      "Value": "1450000",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUMaxFreq",
+      "Value": "0",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUMinFreq",
+      "Value": "3",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMaxFreq",
+      "Value": "2000000",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMinFreq",
+      "Value": "2000000",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPULittleClusterMinFreq",
+      "Value": "1800000",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUMaxFreq",
+      "Value": "0",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUMinFreq",
+      "Value": "0",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUBusMinFreq",
+      "Value": "6881",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUForceRailOn",
+      "Value": "1",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUForceClkOn",
+      "Value": "1",
+      "Duration": 5000
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUIdleTimer",
+      "Value": "10000",
+      "Duration": 5000
+    }
+  ]
+}

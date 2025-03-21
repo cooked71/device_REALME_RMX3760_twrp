@@ -1,0 +1,31 @@
+# Display
+sprd_panel.ko
+sprd_dpu.ko
+sprd_dsi.ko
+
+# Audio
+snd-soc-sprd-codec-sc2730.ko
+snd-soc-sprd-vbc-r3p0.ko
+snd-soc-sprd-mcdt.ko
+
+# Touchscreen
+chipone_tddi.ko
+
+# Fingerprint
+sunwave_fp.ko
+
+# Camera
+sprd_sensor.ko
+sprd_flash_drv.ko
+
+# Power
+sprd_battery.ko
+sprd_charge.ko
+
+# Wireless
+sprd_wlan.ko
+sprd_fm.ko
+
+# USB
+dwc3-sprd.ko
+phy-sprd-qogirl6.ko

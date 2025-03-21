@@ -1,0 +1,90 @@
+# All proprietary files from this list, unless pinned and noted otherwise,
+# are from realme RMX3761 (RMX3761_14.C.65)
+
+# ACDB
+vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_General_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Global_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Handset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
+vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+
+# Audio
+vendor/lib/hw/audio.primary.default.so
+vendor/lib/hw/audio.r_submix.default.so
+vendor/lib/hw/audio.usb.default.so
+vendor/lib/hw/audio.primary.ums9230.so
+vendor/lib/libaudioroute.so
+vendor/lib/libaudiospdif.so
+vendor/lib/libtinyalsa.so
+vendor/lib/libtinycompress.so
+
+# Bluetooth
+vendor/lib64/hw/android.hardware.bluetooth@1.1-impl.so
+vendor/lib64/libbluetooth_audio_session.so
+vendor/bin/hw/android.hardware.bluetooth@1.1-service.btlinux
+
+# Camera
+vendor/lib64/hw/camera.ums9230.so
+vendor/lib64/libcamera_core.so
+vendor/lib64/libcamera_metadata.so
+vendor/lib64/libcamera_utils.so
+vendor/lib64/libsprdcamcore.so
+vendor/lib64/libsprdimage.so
+vendor/lib64/libsprdjpeg.so
+
+# Display
+vendor/lib64/hw/gralloc.ums9230.so
+vendor/lib64/hw/hwcomposer.ums9230.so
+vendor/lib64/hw/memtrack.ums9230.so
+vendor/lib64/libdrm.so
+vendor/lib64/libstagefrighthw.so
+
+# DRM
+vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
+
+# Firmware
+vendor/firmware/EXEC_CALIBRATE_GYRO
+vendor/firmware/modem_fw.bin
+vendor/firmware/wcn.bin
+vendor/firmware/cp_diskbin.bin
+vendor/firmware/fm.bin
+vendor/firmware/soc_modem.bin
+
+# GPS
+vendor/bin/hw/gpsd
+vendor/lib64/hw/gps.default.so
+vendor/lib64/libsupl.so
+vendor/etc/gnss/config/config.xml
+
+# Graphics
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/vulkan.mali.so
+vendor/lib64/libion.so
+vendor/lib64/libgpu_mali.so
+
+# Power
+vendor/lib64/hw/power.default.so
+vendor/lib64/hw/android.hardware.power@1.3-impl.so
+
+# RIL
+vendor/lib64/libril-unisoc.so
+vendor/lib64/librilutils.so
+vendor/lib64/libunisoc-ril.so
+vendor/etc/init/rild.rc
+
+# Sensors
+vendor/lib64/hw/sensors.ums9230.so
+vendor/lib64/libsensorservice.so
+vendor/lib64/libsensorcal.so
+
+# Thermal
+vendor/lib64/hw/thermal.ums9230.so
+vendor/etc/thermal-engine.conf
+
+# Wi-Fi
+vendor/lib64/hw/wifi.default.so
+vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/p2p_supplicant.conf

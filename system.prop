@@ -1,0 +1,42 @@
+# Audio
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+
+# Bluetooth
+bluetooth.device.class_of_device=90,2,12
+bluetooth.profile.a2dp.source.enabled=true
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.bas.client.enabled=true
+bluetooth.profile.gatt.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.map.server.enabled=true
+bluetooth.profile.opp.enabled=true
+bluetooth.profile.pan.nap.enabled=true
+bluetooth.profile.pan.panu.enabled=true
+bluetooth.profile.pbap.server.enabled=true
+bluetooth.profile.sap.server.enabled=true
+
+# Display
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# Graphics
+debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
+debug.sf.high_fps_early_phase_offset_ns=-4000000
+debug.sf.high_fps_late_app_phase_offset_ns=1000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
+
+# Radio
+persist.radio.multisim.config=dsds
+persist.vendor.radio.enableadvancedscan=true
+ro.telephony.default_network=33,33
+telephony.lteOnCdmaDevice=1
+
+# Wifi
+wifi.interface=wlan0
+wifi.direct.interface=p2p-dev-wlan0
