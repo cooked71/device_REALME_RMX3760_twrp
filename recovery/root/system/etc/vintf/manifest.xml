@@ -1,0 +1,17 @@
+<!--
+    Input:
+        system/libhidl/vintfdata/system_ext_manifest.default.xml
+        device/sprd/sys_mpool/module/system_ext/telephony/srmi_default.xml
+-->
+<manifest version="4.0" type="framework">
+    <hal format="aidl">
+        <name>vendor.unisoc.frameworks.srmi</name>
+        <fqname>ISrmiManager/default</fqname>
+    </hal>
+    <vendor-ndk>
+        <version>34</version>
+    </vendor-ndk>
+    <vendor-ndk>
+        <version>33</version>
+    </vendor-ndk>
+</manifest>
