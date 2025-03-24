@@ -1,10 +1,10 @@
 <!--
     Input:
-        hardware/interfaces/compatibility_matrices/compatibility_matrix.7.xml
-        out/soong/.intermediates/kernel/configs/t/android-5.10/kernel_config_t_5.10/matrix_kernel_config_t_5.10.xml
-        out/soong/.intermediates/kernel/configs/t/android-5.15/kernel_config_t_5.15/matrix_kernel_config_t_5.15.xml
+        hardware/interfaces/compatibility_matrices/compatibility_matrix.4.xml
+        out/soong/.intermediates/kernel/configs/q/android-4.14/kernel_config_q_4.14/matrix_kernel_config_q_4.14.xml
+        out/soong/.intermediates/kernel/configs/q/android-4.19/kernel_config_q_4.19/matrix_kernel_config_q_4.19.xml
 -->
-<compatibility-matrix version="4.0" type="framework" level="7">
+<compatibility-matrix version="4.0" type="framework" level="4">
     <hal format="hidl" optional="true">
         <name>android.hardware.atrace</name>
         <version>1.0</version>
@@ -15,8 +15,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.audio</name>
-        <version>6.0</version>
-        <version>7.0-1</version>
+        <version>5.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -24,17 +23,9 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.audio.effect</name>
-        <version>6.0</version>
-        <version>7.0</version>
+        <version>5.0</version>
         <interface>
             <name>IEffectsFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.authsecret</name>
-        <interface>
-            <name>IAuthSecret</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -46,54 +37,20 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.automotive.audiocontrol</name>
+        <version>1.0</version>
         <interface>
             <name>IAudioControl</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.automotive.can</name>
+        <name>android.hardware.automotive.evs</name>
         <version>1.0</version>
         <interface>
-            <name>ICanBus</name>
-            <regex-instance>.*</regex-instance>
-        </interface>
-        <interface>
-            <name>ICanController</name>
-            <regex-instance>.*</regex-instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.automotive.evs</name>
-        <interface>
             <name>IEvsEnumerator</name>
             <instance>default</instance>
-            <regex-instance>[a-z]+/[0-9]+</regex-instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.automotive.evs</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IEvsEnumerator</name>
-            <instance>default</instance>
-            <regex-instance>[a-z]+/[0-9]+</regex-instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.automotive.occupant_awareness</name>
-        <interface>
-            <name>IOccupantAwareness</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.automotive.vehicle</name>
-        <interface>
-            <name>IVehicle</name>
-            <regex-instance>.*</regex-instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -101,7 +58,7 @@
         <version>2.0</version>
         <interface>
             <name>IVehicle</name>
-            <regex-instance>.*</regex-instance>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -112,48 +69,33 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.biometrics.face</name>
-        <version>2</version>
-        <interface>
-            <name>IFace</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.biometrics.fingerprint</name>
-        <version>2.1-3</version>
+        <version>2.1</version>
         <interface>
             <name>IBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.biometrics.fingerprint</name>
-        <interface>
-            <name>IFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.bluetooth</name>
-        <version>1.0-1</version>
+        <version>1.0</version>
         <interface>
             <name>IBluetoothHci</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
-        <version>2</version>
+        <version>2.0</version>
         <interface>
-            <name>IBluetoothAudioProviderFactory</name>
+            <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.boot</name>
-        <version>1.2</version>
+        <version>1.0</version>
         <interface>
             <name>IBootControl</name>
             <instance>default</instance>
@@ -177,14 +119,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.camera.provider</name>
-        <version>2.4-7</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <regex-instance>[^/]+/[0-9]+</regex-instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.camera.provider</name>
+        <version>2.4-5</version>
         <interface>
             <name>ICameraProvider</name>
             <regex-instance>[^/]+/[0-9]+</regex-instance>
@@ -192,9 +127,17 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.cas</name>
-        <version>1.1-2</version>
+        <version>1.1</version>
         <interface>
             <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.configstore</name>
+        <version>1.1</version>
+        <interface>
+            <name>ISurfaceFlingerConfigs</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -206,23 +149,17 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.contexthub</name>
+        <version>1.0</version>
         <interface>
-            <name>IContextHub</name>
+            <name>IContexthub</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.drm</name>
-        <interface>
-            <name>IDrmFactory</name>
-            <regex-instance>.*</regex-instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.drm</name>
-        <version>1.3-4</version>
+        <version>1.0-2</version>
         <interface>
             <name>ICryptoFactory</name>
             <regex-instance>.*</regex-instance>
@@ -232,8 +169,9 @@
             <regex-instance>.*</regex-instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.dumpstate</name>
+        <version>1.0</version>
         <interface>
             <name>IDumpstateDevice</name>
             <instance>default</instance>
@@ -249,31 +187,9 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
-        <version>2.0-1</version>
+        <version>2.0</version>
         <interface>
             <name>IGnss</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.gnss</name>
-        <version>2</version>
-        <interface>
-            <name>IGnss</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.gnss.measurement_corrections</name>
-        <interface>
-            <name>IMeasurementCorrectionsInterface</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.gnss.visibility_control</name>
-        <interface>
-            <name>IGnssVisibilityControl</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -281,14 +197,6 @@
         <name>android.hardware.graphics.allocator</name>
         <version>2.0</version>
         <version>3.0</version>
-        <version>4.0</version>
-        <interface>
-            <name>IAllocator</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.graphics.allocator</name>
         <interface>
             <name>IAllocator</name>
             <instance>default</instance>
@@ -296,14 +204,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.graphics.composer</name>
-        <version>2.1-4</version>
-        <interface>
-            <name>IComposer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.graphics.composer3</name>
+        <version>2.1-3</version>
         <interface>
             <name>IComposer</name>
             <instance>default</instance>
@@ -313,43 +214,38 @@
         <name>android.hardware.graphics.mapper</name>
         <version>2.1</version>
         <version>3.0</version>
-        <version>4.0</version>
         <interface>
             <name>IMapper</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.health</name>
+        <version>2.0</version>
         <interface>
             <name>IHealth</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.health.storage</name>
+        <version>1.0</version>
         <interface>
             <name>IStorage</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.identity</name>
-        <version>1-4</version>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.input.classifier</name>
+        <version>1.0</version>
         <interface>
-            <name>IIdentityCredentialStore</name>
+            <name>IInputClassifier</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.input.processor</name>
-        <interface>
-            <name>IInputProcessor</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.ir</name>
+        <version>1.0</version>
         <interface>
             <name>IConsumerIr</name>
             <instance>default</instance>
@@ -358,7 +254,7 @@
     <hal format="hidl" optional="true">
         <name>android.hardware.keymaster</name>
         <version>3.0</version>
-        <version>4.0-1</version>
+        <version>4.0</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>default</instance>
@@ -366,23 +262,23 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.keymaster</name>
-        <version>4.0-1</version>
+        <version>4.0</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>strongbox</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.light</name>
-        <version>2</version>
+        <version>2.0</version>
         <interface>
-            <name>ILights</name>
+            <name>ILight</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.media.c2</name>
-        <version>1.0-2</version>
+        <version>1.0</version>
         <interface>
             <name>IComponentStore</name>
             <regex-instance>default[0-9]*</regex-instance>
@@ -401,31 +297,17 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.memtrack</name>
+        <version>1.0</version>
         <interface>
             <name>IMemtrack</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.net.nlinterceptor</name>
-        <interface>
-            <name>IInterceptor</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.neuralnetworks</name>
-        <version>1.0-3</version>
-        <interface>
-            <name>IDevice</name>
-            <regex-instance>.*</regex-instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.neuralnetworks</name>
-        <version>1-4</version>
+        <version>1.0-2</version>
         <interface>
             <name>IDevice</name>
             <regex-instance>.*</regex-instance>
@@ -436,27 +318,6 @@
         <version>1.2</version>
         <interface>
             <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.nfc</name>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.nfc</name>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.oemlock</name>
-        <interface>
-            <name>IOemLock</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -468,19 +329,30 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.power</name>
-        <version>2-3</version>
+        <version>1.0-3</version>
         <interface>
             <name>IPower</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.power.stats</name>
+        <version>1.0</version>
         <interface>
             <name>IPowerStats</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.4</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+            <instance>slot3</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -491,71 +363,11 @@
             <instance>slot1</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.radio.config</name>
+        <version>1.1</version>
         <interface>
             <name>IRadioConfig</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.data</name>
-        <interface>
-            <name>IRadioData</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-            <instance>slot3</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.messaging</name>
-        <interface>
-            <name>IRadioMessaging</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-            <instance>slot3</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.modem</name>
-        <interface>
-            <name>IRadioModem</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-            <instance>slot3</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.network</name>
-        <interface>
-            <name>IRadioNetwork</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-            <instance>slot3</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.sim</name>
-        <interface>
-            <name>IRadioSim</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-            <instance>slot3</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.radio.voice</name>
-        <interface>
-            <name>IRadioVoice</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-            <instance>slot3</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.rebootescrow</name>
-        <interface>
-            <name>IRebootEscrow</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -569,57 +381,17 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.secure_element</name>
-        <version>1.0-2</version>
+        <version>1.0</version>
         <interface>
             <name>ISecureElement</name>
             <regex-instance>SIM[1-9][0-9]*</regex-instance>
             <regex-instance>eSE[1-9][0-9]*</regex-instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.security.keymint</name>
-        <version>1-2</version>
-        <interface>
-            <name>IKeyMintDevice</name>
-            <instance>default</instance>
-            <instance>strongbox</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.security.keymint</name>
-        <version>1-2</version>
-        <interface>
-            <name>IRemotelyProvisionedComponent</name>
-            <instance>default</instance>
-            <instance>strongbox</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.security.secureclock</name>
-        <interface>
-            <name>ISecureClock</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.security.sharedsecret</name>
-        <interface>
-            <name>ISharedSecret</name>
-            <instance>default</instance>
-            <instance>strongbox</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.sensors</name>
-        <interface>
-            <name>ISensors</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.sensors</name>
         <version>1.0</version>
-        <version>2.0-1</version>
+        <version>2.0</version>
         <interface>
             <name>ISensors</name>
             <instance>default</instance>
@@ -627,14 +399,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.soundtrigger</name>
-        <version>2.3</version>
-        <interface>
-            <name>ISoundTriggerHw</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.soundtrigger3</name>
+        <version>2.0-2</version>
         <interface>
             <name>ISoundTriggerHw</name>
             <instance>default</instance>
@@ -650,7 +415,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.tetheroffload.control</name>
-        <version>1.1</version>
+        <version>1.0</version>
         <interface>
             <name>IOffloadControl</name>
             <instance>default</instance>
@@ -666,7 +431,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.tv.cec</name>
-        <version>1.0-1</version>
+        <version>1.0</version>
         <interface>
             <name>IHdmiCec</name>
             <instance>default</instance>
@@ -681,30 +446,8 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.tv.tuner</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>ITuner</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.tv.tuner</name>
-        <interface>
-            <name>ITuner</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>android.hardware.usb</name>
-        <version>1.0-3</version>
-        <interface>
-            <name>IUsb</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.usb</name>
+        <version>1.0-2</version>
         <interface>
             <name>IUsb</name>
             <instance>default</instance>
@@ -712,45 +455,31 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.usb.gadget</name>
-        <version>1.0-2</version>
+        <version>1.0</version>
         <interface>
             <name>IUsbGadget</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.uwb</name>
-        <interface>
-            <name>IUwb</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.vibrator</name>
-        <version>1-2</version>
+        <version>1.0-3</version>
         <interface>
             <name>IVibrator</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.vibrator</name>
-        <version>1-2</version>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.vr</name>
+        <version>1.0</version>
         <interface>
-            <name>IVibratorManager</name>
+            <name>IVr</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.weaver</name>
         <version>1.0</version>
-        <interface>
-            <name>IWeaver</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>android.hardware.weaver</name>
         <interface>
             <name>IWeaver</name>
             <instance>default</instance>
@@ -758,76 +487,25 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.wifi</name>
-        <version>1.3-6</version>
+        <version>1.0-3</version>
         <interface>
             <name>IWifi</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.wifi.hostapd</name>
+        <version>1.0-1</version>
         <interface>
             <name>IHostapd</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="aidl" optional="true">
+    <hal format="hidl" optional="true">
         <name>android.hardware.wifi.supplicant</name>
+        <version>1.0-2</version>
         <interface>
             <name>ISupplicant</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.anc.fingerprint.extension</name>
-        <interface>
-            <name>IFingerprintExtension</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.eventprocessor</name>
-        <version>1.0</version>
-        <interface>
-            <name>INxpEseEvtProcessor</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.nxpese</name>
-        <version>1.0</version>
-        <interface>
-            <name>INxpEse</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.nxpnfc</name>
-        <version>2.0</version>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.nxp.nxpnfc_aidl</name>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.nxp.nxpnfclegacy</name>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfcLegacy</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.oplus.hardware.commondcs</name>
-        <interface>
-            <name>ICommonDcsAidlHalService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -839,7 +517,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
         <config>
             <key>CONFIG_ADVISE_SYSCALLS</key>
             <value type="tristate">y</value>
@@ -853,10 +531,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_ANDROID_BINDERFS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_ANDROID_BINDER_DEVICES</key>
             <value type="string">binder,hwbinder,vndbinder</value>
         </config>
@@ -865,19 +539,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_ANDROID_LOW_MEMORY_KILLER</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
-            <key>CONFIG_ANDROID_PARANOID_NETWORK</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_ASHMEM</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_AS_IS_LLVM</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -901,19 +563,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_BLK_INLINE_ENCRYPTION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_BLOCK</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_BPFILTER</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
-            <key>CONFIG_BPF_JIT</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -921,7 +571,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_CC_IS_CLANG</key>
+            <key>CONFIG_CC_STACKPROTECTOR_STRONG</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -957,18 +607,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_CRYPTO_CHACHA20POLY1305</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_CRYPTO_CMAC</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_CRYPTO_CTR</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_CRYPTO_ECB</key>
             <value type="tristate">y</value>
         </config>
@@ -1001,14 +639,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_CRYPTO_XCBC</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_DEBUG_LIST</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_DEFAULT_SECURITY_SELINUX</key>
             <value type="tristate">y</value>
         </config>
@@ -1017,19 +647,7 @@
             <value type="tristate">n</value>
         </config>
         <config>
-            <key>CONFIG_DM_DEFAULT_KEY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_DM_SNAPSHOT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_DM_VERITY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_DUMMY</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1053,22 +671,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_FS_ENCRYPTION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_FS_ENCRYPTION_INLINE_CRYPT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_FS_VERITY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_FS_VERITY_BUILTIN_SIGNATURES</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_FUSE_FS</key>
             <value type="tristate">y</value>
         </config>
@@ -1077,27 +679,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_FW_CACHE</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_HARDENED_USERCOPY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HIDRAW</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HID_GENERIC</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HID_PLAYSTATION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HID_SONY</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1125,6 +707,14 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_INET6_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
             <key>CONFIG_INET_DIAG_DESTROY</key>
             <value type="tristate">y</value>
         </config>
@@ -1137,19 +727,15 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_INET_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
             <key>CONFIG_INOTIFY_USER</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_INPUT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_INPUT_EVDEV</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_INPUT_JOYSTICK</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1167,10 +753,6 @@
         <config>
             <key>CONFIG_IP6_NF_MATCH_RPFILTER</key>
             <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_IP6_NF_NAT</key>
-            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_IP6_NF_RAW</key>
@@ -1281,15 +863,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_JOYSTICK_XPAD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_L2TP</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_LD_IS_LLD</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1313,10 +887,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_MODULE_FORCE_UNLOAD</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_MODULE_UNLOAD</key>
             <value type="tristate">y</value>
         </config>
@@ -1326,10 +896,6 @@
         </config>
         <config>
             <key>CONFIG_MULTIUSER</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NAMESPACES</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1405,15 +971,15 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_NETFILTER_XT_MATCH_QTAGUID</key>
+            <value type="tristate">n</value>
+        </config>
+        <config>
             <key>CONFIG_NETFILTER_XT_MATCH_QUOTA</key>
             <value type="tristate">y</value>
         </config>
         <config>
             <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2_LOG</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1489,23 +1055,11 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_NET_ACT_BPF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NET_ACT_POLICE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_NET_CLS_ACT</key>
             <value type="tristate">y</value>
         </config>
         <config>
             <key>CONFIG_NET_CLS_BPF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NET_CLS_MATCHALL</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1533,10 +1087,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_NET_NS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_NET_SCHED</key>
             <value type="tristate">y</value>
         </config>
@@ -1546,10 +1096,6 @@
         </config>
         <config>
             <key>CONFIG_NET_SCH_INGRESS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NET_SCH_TBF</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1578,6 +1124,14 @@
         </config>
         <config>
             <key>CONFIG_NF_CONNTRACK_H323</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_IPV4</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_NF_CONNTRACK_IPV6</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1641,10 +1195,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_PLAYSTATION_FF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_PM_AUTOSLEEP</key>
             <value type="tristate">n</value>
         </config>
@@ -1693,10 +1243,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_PSI</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_QFMT_V2</key>
             <value type="tristate">y</value>
         </config>
@@ -1709,16 +1255,8 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_RD_LZ4</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_RTC_CLASS</key>
             <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_RT_GROUP_SCHED</key>
-            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_SCHED_DEBUG</key>
@@ -1741,6 +1279,10 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_SECURITY_PERF_EVENTS_RESTRICT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
             <key>CONFIG_SECURITY_SELINUX</key>
             <value type="tristate">y</value>
         </config>
@@ -1757,27 +1299,11 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_SONY_FF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_SOUND</key>
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_STACKPROTECTOR</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_STACKPROTECTOR_STRONG</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_STAGING</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_STATIC_USERMODEHELPER</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1821,19 +1347,11 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_TRACE_GPU_MEM</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_TTY</key>
             <value type="tristate">y</value>
         </config>
         <config>
             <key>CONFIG_TUN</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_UHID</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1885,19 +1403,7 @@
             <value type="tristate">n</value>
         </config>
         <config>
-            <key>CONFIG_UTS_NS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_VETH</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_XFRM_INTERFACE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_XFRM_MIGRATE</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -1909,7 +1415,7 @@
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
                 <key>CONFIG_ARM</key>
@@ -1921,10 +1427,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_CPU_SW_DOMAIN_PAN</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_DEVKMEM</key>
             <value type="tristate">n</value>
         </config>
@@ -1933,21 +1435,45 @@
             <value type="tristate">n</value>
         </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM</key>
+                <value type="tristate">y</value>
+            </config>
+            <config>
+                <key>CONFIG_CPU_TTBR0_PAN</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_CPU_SW_DOMAIN_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.105" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM</key>
+                <value type="tristate">y</value>
+            </config>
+            <config>
+                <key>CONFIG_CPU_SW_DOMAIN_PAN</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_CPU_TTBR0_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
                 <key>CONFIG_ARM64</key>
                 <value type="tristate">y</value>
             </config>
         </conditions>
-        <config>
-            <key>CONFIG_ARM64_PAN</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
-            <value type="tristate">y</value>
-        </config>
         <config>
             <key>CONFIG_ARMV8_DEPRECATED</key>
             <value type="tristate">y</value>
@@ -1965,35 +1491,43 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_SHADOW_CALL_STACK</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_SWP_EMULATION</key>
             <value type="tristate">y</value>
         </config>
+    </kernel>
+    <kernel version="4.14.105" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM64</key>
+                <value type="tristate">y</value>
+            </config>
+            <config>
+                <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
         <config>
-            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PMD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PUD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_KFENCE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_USERFAULTFD</key>
+            <key>CONFIG_ARM64_PAN</key>
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM64</key>
+                <value type="tristate">y</value>
+            </config>
+            <config>
+                <key>CONFIG_ARM64_PAN</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
                 <key>CONFIG_X86</key>
@@ -2005,10 +1539,6 @@
             <value type="tristate">n</value>
         </config>
         <config>
-            <key>CONFIG_KFENCE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_PAGE_TABLE_ISOLATION</key>
             <value type="tristate">y</value>
         </config>
@@ -2016,32 +1546,8 @@
             <key>CONFIG_RETPOLINE</key>
             <value type="tristate">y</value>
         </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PMD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PUD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_USERFAULTFD</key>
-            <value type="tristate">y</value>
-        </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
-        <conditions>
-            <config>
-                <key>CONFIG_X86_64</key>
-                <value type="tristate">y</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
                 <key>CONFIG_ACPI</key>
@@ -2053,7 +1559,7 @@
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
                 <key>CONFIG_OF</key>
@@ -2065,59 +1571,43 @@
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
-                <key>CONFIG_EXT4_FS</key>
-                <value type="tristate">y</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_EXT4_FS_POSIX_ACL</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="5.10.107" level="7">
-        <conditions>
-            <config>
-                <key>CONFIG_F2FS_FS</key>
-                <value type="tristate">y</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_F2FS_FS_POSIX_ACL</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="5.10.107" level="7">
-        <conditions>
-            <config>
-                <key>CONFIG_HAVE_ARCH_VMAP_STACK</key>
-                <value type="tristate">y</value>
-            </config>
-            <config>
-                <key>CONFIG_KASAN_SW_TAGS</key>
+                <key>CONFIG_MEMCG</key>
                 <value type="tristate">n</value>
             </config>
         </conditions>
         <config>
-            <key>CONFIG_VMAP_STACK</key>
+            <key>CONFIG_PSI</key>
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.10.107" level="7">
+    <kernel version="4.14.105" level="4">
         <conditions>
             <config>
-                <key>CONFIG_CC_HAS_AUTO_VAR_INIT_ZERO</key>
-                <value type="tristate">y</value>
+                <key>CONFIG_PSI</key>
+                <value type="tristate">n</value>
             </config>
         </conditions>
         <config>
-            <key>CONFIG_INIT_STACK_ALL_ZERO</key>
+            <key>CONFIG_MEMCG</key>
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.14.105" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_USB_RTL8152</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_USB</key>
+            <value type="tristate">n</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.42" level="4">
         <config>
             <key>CONFIG_ADVISE_SYSCALLS</key>
             <value type="tristate">y</value>
@@ -2131,10 +1621,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_ANDROID_BINDERFS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_ANDROID_BINDER_DEVICES</key>
             <value type="string">binder,hwbinder,vndbinder</value>
         </config>
@@ -2143,19 +1629,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_ANDROID_LOW_MEMORY_KILLER</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
-            <key>CONFIG_ANDROID_PARANOID_NETWORK</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_ASHMEM</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_AS_IS_LLVM</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2179,27 +1653,11 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_BLK_INLINE_ENCRYPTION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_BLOCK</key>
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_BPFILTER</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
-            <key>CONFIG_BPF_JIT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_BPF_SYSCALL</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_CC_IS_CLANG</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2235,18 +1693,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_CRYPTO_CHACHA20POLY1305</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_CRYPTO_CMAC</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_CRYPTO_CTR</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_CRYPTO_ECB</key>
             <value type="tristate">y</value>
         </config>
@@ -2279,14 +1725,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_CRYPTO_XCBC</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_DEBUG_LIST</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_DEFAULT_SECURITY_SELINUX</key>
             <value type="tristate">y</value>
         </config>
@@ -2295,19 +1733,7 @@
             <value type="tristate">n</value>
         </config>
         <config>
-            <key>CONFIG_DM_DEFAULT_KEY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_DM_SNAPSHOT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_DM_VERITY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_DUMMY</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2331,22 +1757,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_FS_ENCRYPTION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_FS_ENCRYPTION_INLINE_CRYPT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_FS_VERITY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_FS_VERITY_BUILTIN_SIGNATURES</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_FUSE_FS</key>
             <value type="tristate">y</value>
         </config>
@@ -2355,27 +1765,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_FW_CACHE</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_HARDENED_USERCOPY</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HIDRAW</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HID_GENERIC</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HID_PLAYSTATION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HID_SONY</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2403,6 +1793,14 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_INET6_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET6_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
             <key>CONFIG_INET_DIAG_DESTROY</key>
             <value type="tristate">y</value>
         </config>
@@ -2415,19 +1813,15 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_INET_XFRM_MODE_TRANSPORT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
+            <key>CONFIG_INET_XFRM_MODE_TUNNEL</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
             <key>CONFIG_INOTIFY_USER</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_INPUT</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_INPUT_EVDEV</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_INPUT_JOYSTICK</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2445,10 +1839,6 @@
         <config>
             <key>CONFIG_IP6_NF_MATCH_RPFILTER</key>
             <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_IP6_NF_NAT</key>
-            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_IP6_NF_RAW</key>
@@ -2559,15 +1949,7 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_JOYSTICK_XPAD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_L2TP</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_LD_IS_LLD</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2591,10 +1973,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_MODULE_FORCE_UNLOAD</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_MODULE_UNLOAD</key>
             <value type="tristate">y</value>
         </config>
@@ -2604,10 +1982,6 @@
         </config>
         <config>
             <key>CONFIG_MULTIUSER</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NAMESPACES</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2691,10 +2065,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_NETFILTER_XT_MATCH_QUOTA2_LOG</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_NETFILTER_XT_MATCH_SOCKET</key>
             <value type="tristate">y</value>
         </config>
@@ -2767,23 +2137,11 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_NET_ACT_BPF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NET_ACT_POLICE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_NET_CLS_ACT</key>
             <value type="tristate">y</value>
         </config>
         <config>
             <key>CONFIG_NET_CLS_BPF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NET_CLS_MATCHALL</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2811,10 +2169,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_NET_NS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_NET_SCHED</key>
             <value type="tristate">y</value>
         </config>
@@ -2824,10 +2178,6 @@
         </config>
         <config>
             <key>CONFIG_NET_SCH_INGRESS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_NET_SCH_TBF</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -2919,14 +2269,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_PLAYSTATION_FF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_PM_AUTOSLEEP</key>
-            <value type="tristate">n</value>
-        </config>
-        <config>
             <key>CONFIG_PM_WAKELOCKS</key>
             <value type="tristate">y</value>
         </config>
@@ -2971,10 +2313,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_PSI</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_QFMT_V2</key>
             <value type="tristate">y</value>
         </config>
@@ -2987,16 +2325,8 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_RD_LZ4</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_RTC_CLASS</key>
             <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_RT_GROUP_SCHED</key>
-            <value type="tristate">n</value>
         </config>
         <config>
             <key>CONFIG_SCHED_DEBUG</key>
@@ -3019,6 +2349,10 @@
             <value type="tristate">y</value>
         </config>
         <config>
+            <key>CONFIG_SECURITY_PERF_EVENTS_RESTRICT</key>
+            <value type="tristate">y</value>
+        </config>
+        <config>
             <key>CONFIG_SECURITY_SELINUX</key>
             <value type="tristate">y</value>
         </config>
@@ -3035,10 +2369,6 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_SONY_FF</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_SOUND</key>
             <value type="tristate">y</value>
         </config>
@@ -3052,10 +2382,6 @@
         </config>
         <config>
             <key>CONFIG_STAGING</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_STATIC_USERMODEHELPER</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -3099,19 +2425,11 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_TRACE_GPU_MEM</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_TTY</key>
             <value type="tristate">y</value>
         </config>
         <config>
             <key>CONFIG_TUN</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_UHID</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -3163,19 +2481,7 @@
             <value type="tristate">n</value>
         </config>
         <config>
-            <key>CONFIG_UTS_NS</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_VETH</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_XFRM_INTERFACE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_XFRM_MIGRATE</key>
             <value type="tristate">y</value>
         </config>
         <config>
@@ -3187,7 +2493,7 @@
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
                 <key>CONFIG_ARM</key>
@@ -3211,21 +2517,13 @@
             <value type="tristate">n</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
                 <key>CONFIG_ARM64</key>
                 <value type="tristate">y</value>
             </config>
         </conditions>
-        <config>
-            <key>CONFIG_ARM64_PAN</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
-            <value type="tristate">y</value>
-        </config>
         <config>
             <key>CONFIG_ARMV8_DEPRECATED</key>
             <value type="tristate">y</value>
@@ -3239,43 +2537,47 @@
             <value type="tristate">y</value>
         </config>
         <config>
-            <key>CONFIG_RANDOMIZE_BASE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_SETEND_EMULATION</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_SHADOW_CALL_STACK</key>
             <value type="tristate">y</value>
         </config>
         <config>
             <key>CONFIG_SWP_EMULATION</key>
             <value type="tristate">y</value>
         </config>
+    </kernel>
+    <kernel version="4.19.42" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM64</key>
+                <value type="tristate">y</value>
+            </config>
+            <config>
+                <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
         <config>
-            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PMD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PUD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_KFENCE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_USERFAULTFD</key>
+            <key>CONFIG_ARM64_PAN</key>
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_ARM64</key>
+                <value type="tristate">y</value>
+            </config>
+            <config>
+                <key>CONFIG_ARM64_PAN</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_ARM64_SW_TTBR0_PAN</key>
+            <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
                 <key>CONFIG_X86</key>
@@ -3287,10 +2589,6 @@
             <value type="tristate">n</value>
         </config>
         <config>
-            <key>CONFIG_KFENCE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
             <key>CONFIG_PAGE_TABLE_ISOLATION</key>
             <value type="tristate">y</value>
         </config>
@@ -3298,36 +2596,8 @@
             <key>CONFIG_RETPOLINE</key>
             <value type="tristate">y</value>
         </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PMD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_HAVE_MOVE_PUD</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_RANDOMIZE_BASE</key>
-            <value type="tristate">y</value>
-        </config>
-        <config>
-            <key>CONFIG_USERFAULTFD</key>
-            <value type="tristate">y</value>
-        </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
-        <conditions>
-            <config>
-                <key>CONFIG_X86_64</key>
-                <value type="tristate">y</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_BPF_JIT_ALWAYS_ON</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
                 <key>CONFIG_ACPI</key>
@@ -3339,7 +2609,7 @@
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
                 <key>CONFIG_OF</key>
@@ -3351,56 +2621,40 @@
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
-                <key>CONFIG_EXT4_FS</key>
-                <value type="tristate">y</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_EXT4_FS_POSIX_ACL</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="5.15.41" level="7">
-        <conditions>
-            <config>
-                <key>CONFIG_F2FS_FS</key>
-                <value type="tristate">y</value>
-            </config>
-        </conditions>
-        <config>
-            <key>CONFIG_F2FS_FS_POSIX_ACL</key>
-            <value type="tristate">y</value>
-        </config>
-    </kernel>
-    <kernel version="5.15.41" level="7">
-        <conditions>
-            <config>
-                <key>CONFIG_HAVE_ARCH_VMAP_STACK</key>
-                <value type="tristate">y</value>
-            </config>
-            <config>
-                <key>CONFIG_KASAN_SW_TAGS</key>
+                <key>CONFIG_MEMCG</key>
                 <value type="tristate">n</value>
             </config>
         </conditions>
         <config>
-            <key>CONFIG_VMAP_STACK</key>
+            <key>CONFIG_PSI</key>
             <value type="tristate">y</value>
         </config>
     </kernel>
-    <kernel version="5.15.41" level="7">
+    <kernel version="4.19.42" level="4">
         <conditions>
             <config>
-                <key>CONFIG_CC_HAS_AUTO_VAR_INIT_ZERO</key>
-                <value type="tristate">y</value>
+                <key>CONFIG_PSI</key>
+                <value type="tristate">n</value>
             </config>
         </conditions>
         <config>
-            <key>CONFIG_INIT_STACK_ALL_ZERO</key>
+            <key>CONFIG_MEMCG</key>
             <value type="tristate">y</value>
+        </config>
+    </kernel>
+    <kernel version="4.19.42" level="4">
+        <conditions>
+            <config>
+                <key>CONFIG_USB_RTL8152</key>
+                <value type="tristate">n</value>
+            </config>
+        </conditions>
+        <config>
+            <key>CONFIG_USB</key>
+            <value type="tristate">n</value>
         </config>
     </kernel>
 </compatibility-matrix>

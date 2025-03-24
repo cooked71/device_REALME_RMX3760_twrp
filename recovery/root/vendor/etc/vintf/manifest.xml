@@ -6,7 +6,18 @@
         manifest_network.xml
 -->
 <manifest version="4.0" type="device" target-level="7">
-    <hal format="hidl">
+	<hal format="hidl">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <version>4.0</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+  
+ 	     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
         <version>7.1</version>
@@ -199,7 +210,7 @@
         </interface>
         <fqname>@1.0::IWcnVendorInterface/default</fqname>
     </hal>
-    <sepolicy>
+     <sepolicy>
         <version>33.0</version>
     </sepolicy>
 </manifest>
