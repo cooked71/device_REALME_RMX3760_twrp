@@ -7,6 +7,7 @@ we have shell,logs,external_sd, no data decrypt, gatekepeer set to 4.x (on recov
 still need to cleanup useless stuff
 
 seems that an issue is present on twrp_manifest in recovery log trows Atomic commit failed ret=-22 that prevent ui  semms that is due to an updated vesion of graphics_drm.cpp to come up
+replaced  graphics_drm.cpp in ../bootable/recovery/minuitwrp/  
 
 built using twrp minimal manifest 12.1
 
