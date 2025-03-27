@@ -151,6 +151,9 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
+# Temp
+TW_CUSTOM_CPU_TEMP_PATH := sys/devices/virtual/thermal/thermal_zone16/temp
+
 
 
 # TWRP Configuration
@@ -179,7 +182,7 @@ TW_USE_FSCRYPT_POLICY := 2
 #Brightness
 #TW_DEFAULT_BRIGHTNESS := 1400
 #TW_MAX_BRIGHTNESS := 2048
-#TW_DEVICE_VERSION := Git_FASTBOOT
+TW_DEVICE_VERSION := cooked71
 
 
 #logs
