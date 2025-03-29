@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RE58C6
+DEVICE_PATH := device/realme/RE58C2
 
 # Build Hack
 BUILD_BROKEN_DUP_RULES := true
@@ -69,7 +69,7 @@ TARGET_SCREEN_DENSITY := 320
 
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := RE58C6
+TARGET_OTA_ASSERT_DEVICE := RE58C2
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -177,6 +177,12 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 
 #patch for I:Unhandled flag: 'first_stage_mount' ?
+#TW_USE_FSCRYPT_POLICY := 2
+
+# Crypto
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+BOARD_USES_METADATA_PARTITION := true
 TW_USE_FSCRYPT_POLICY := 2
 
 #Brightness

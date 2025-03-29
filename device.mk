@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/realme/RE58C6
+LOCAL_PATH := device/realme/RE58C2
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
@@ -38,13 +38,12 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-impl \
-    android.hardware.keymaster@4.0-service
-
-
+    android.hardware.keymaster@4.0-service \
+    android.hardware.security.keymint@2.0-unisoc.service.trusty    
+       
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-service.trusty
 
 
 PRODUCT_PACKAGES += \
