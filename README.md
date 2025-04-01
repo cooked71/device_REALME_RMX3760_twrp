@@ -3,7 +3,7 @@ this is my first try to build TWRP please forgive me :)
 based on https://github.com/cooked71/device_realme_RMX3834_twrp/tree/main from gitFASTBOOT (is the nearest devtree found)
 from scratch
 
-we have shell,logs,external_sd, no data decrypt, gatekepeer set to 4.x (on recovery.log), and android.health,
+we have shell,logs,external_sd, no data decrypt, gatekepeer up, android.health up, keymint up
 still need to cleanup useless stuff
 
 seems that an issue is present on twrp_manifest in recovery log trows Atomic commit failed ret=-22 that prevent ui to come up ,seems that is due to an updated vesion of graphics_drm.cpp to come up
